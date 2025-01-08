@@ -1,5 +1,5 @@
 +++
-title = "colocation-sample"
+title = "Nix最高!"
 date = 2030-01-01
 +++
 

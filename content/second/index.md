@@ -1,5 +1,5 @@
 +++
-title = "My second post"
+title = "筑波大学"
 date = 2100-01-01
 +++
 

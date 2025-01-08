@@ -5,9 +5,6 @@ base_url = "https://zola-mytutorial.yukiosada.work"
 title = "zola-mytutorial"
 description = "This is a zola mytutorial"
 
-# The default language; used in feeds.
-default_language = "en"
-
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
@@ -23,9 +20,6 @@ generate_feeds = true
 # Defaults to ["atom.xml"], which has a built-in template that renders an Atom 1.0 feed.
 # There is also a built-in template "rss.xml" that renders an RSS 2.0 feed.
 feed_filenames = ["rss.xml"]
-
-# The default author for pages
-author = "Myxogastria0808"
 
 [markdown]
 # Whether to do syntax highlighting

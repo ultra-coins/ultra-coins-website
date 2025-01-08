@@ -1,4 +1,26 @@
 {% extends "base.html" %} {% block content %}
-<h1 class="title">This is my blog made with Zola.</h1>
-<p><a href="{{ get_url(path='@/blog/_index.md') }}">Posts</a>.</p>
+<div class="container">
+  <h1 class="title krona-one-regular">What is Ultra Coins</h1>
+  <div>
+    <p class="content klee-one-regular">
+      Ultra Coinsの説明
+      ほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげ
+    </p>
+    <div></div>
+  </div>
+
+  <h1 class="title krona-one-regular">News</h1>
+  <ul class="post-ul">
+    {%for page in section.pages %}
+    <li class="post-li">
+      <a class="post-a" href="{{ page.permalink | safe}}"
+        ><p class="krona-one-regular post-date">{{ page.date }}</p>
+        <p class="klee-one-regular post-title">{{ page.title }}</p>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+
+  <h1 class="title krona-one-regular">How to Join Ultra Coins</h1>
+</div>
 {% endblock content %}
