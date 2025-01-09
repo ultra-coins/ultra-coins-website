@@ -1,166 +1,118 @@
-# Setup
+# Ultra Coins の Website 案
 
-## Setup nix environment
+## 記事の追加方法
 
-1. create `flake.nix`
+適当なディレクトリを`content`配下に作成し、その中に`index.md`を作成する。
 
-#### `flake.nix`
+> [!NOTE]
+> 画像などは作成したディレクトリに配置する。
 
-```nix
-{
-  description = "zola environment";
-  inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
-    flake-utils.url = "github:numtide/flake-utils";
-  };
+## Ultra Coins の Blog 特有の記法
 
-  outputs =
-    inputs:
-    inputs.flake-utils.lib.eachDefaultSystem (
-      system:
-      let
-        pkgs = inputs.nixpkgs.legacyPackages.${system};
-      in
-      {
-        devShells.default = pkgs.mkShell {
-          packages = with pkgs; [
-            zola
-          ];
-        };
-      }
-    );
-}
+### mermaid
+
+```
+{% mermaid() %}
+#この中にmermaidのコードを書く
+{% end %}
 ```
 
-2. execute `nix develop -c $SHELL`
+#### 例
 
-```sh
-nix develop -c $SHELL
+```
+{% mermaid() %}
+flowchart LR
+rdb["PostgreSQL (RDB)"] <--> server["server (main)"]
+graphdb["Neo4j (GraphDB)"] <--> server["server (main)"]
+meilisearch["Meilisearch (検索エンジン)"] <--> server["server (main)"]
+cloudflare["Cloudflare R2 (画像保存)"] <--> image-server["image-server (画像専用)"]
+server["server (main)"] <--> client["client"]
+image-server["image-server (画像専用)"] <--> client["client"]
+{% end %}
+
 ```
 
-## Setup zola environmant
+### note
 
-3. Create zola project
-
-```sh
-zola init -f
+```
+{% note() %}
+# ここにnoteの内容を書く
+{% end %}
 ```
 
-4. Create those files
+#### 例
 
-#### `templates/base.html`
-
-```html
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Blog</title>
-  </head>
-  <body>
-    <section class="section">
-      <div class="container">{% block content %} {% endblock %}</div>
-    </section>
-  </body>
-</html>
+```
+{% note() %}
+これは note です。
+{% end %}
 ```
 
-#### `templates/index.html`
+### tip
 
-This is a Webcome Page.
-
-```html
-{% extends "se.html" %} {% block content %}
-<h1 class="title">This is my blog made with Zola.</h1>
-<p><a href="{{ get_url(path='@/blog/_index.md') }}">Posts</a>.</p>
-{% endblock content %}
+```
+{% tip() %}
+# ここにtipの内容を書く
+{% end %}
 ```
 
-#### `templates/blog.html`
+#### 例
 
-This is a Blog List Page.
-
-```html
-{% extends "base.html" %} {% block content %}
-<h1 class="title">{{ section.title }}</h1>
-<ul>
-  {%for page in section.pages %}
-  <li>
-    <a href="{{ page.permalink | safe}}">{{ page.title }}</a>
-  </li>
-  {% endfor %}
-</ul>
-<p><a href="/">Back</a></p>
-{% endblock content %}
+```
+{% tip() %}
+これは tip です。
+{% end %}
 ```
 
-#### `templates/blog-page.html`
+### important
 
-This is a Blog Page Template
-
-```html
-{% extends "base.html" %} {% block content %}
-<h1 class="title">{{ page.title }}</h1>
-<p class="subtitle"><strong>{{ page.date }}</strong></p>
-{{ page.content | safe }}
-<p><a href="/blog/">Back</a></p>
-{% endblock content %}
+```
+{% important() %}
+# ここにimportantの内容を書く
+{% end %}
 ```
 
-#### `content/blog/_index.md`
+#### 例
 
-This is a setting file (format: TOML)
-
-You have to enclose settings in `+++`.
-
-```markdown
-+++
-title = "List of blog posts"
-sort_by = "date"
-template = "blog.html"
-page_template = "blog-page.html"
-+++
+```
+{% important() %}
+これは important です。
+{% end %}
 ```
 
-#### `content/blog/first.md`
+### warning
 
-```markdown
-+++
-title = "My first blog post"
-date = 2020-01-01
-+++
-
-This is my first blog post.
+```
+{% warning() %}
+# ここにwarningの内容を書く
+{% end %}
 ```
 
-## Publish using Cloudflare Pages
+#### 例
 
-5. Select `zola` template and build
+```
+{% warning() %}
+これは warning です。
+{% end %}
+```
 
-The build maybe failed.
+### caution
 
-- build configuration
-  - Build command: zola build
-  - Build output:public
-  - Root directory:
-  - Build comments:Enabled
+```
+{% caution() %}
+# ここにcautionの内容を書く
+{% end %}
+```
 
-6. Change under settings
+#### 例
 
-- Set `Variables and Secrets`
-  - Type: Plaintext
-  - Name: ZOLA_VERSION
-  - Value: 0.19.2
-- Change `Production System Version` and `Preview System Version`
-  - Production System Version: Version 1
-  - Preview System Version: Version 1
+```
+{% caution() %}
+これは caution です。
+{% end %}
+```
 
-7. Rebuild
-
-**Finish**
-
-# References
+## References
 
 https://www.getzola.org/documentation/getting-started/overview/#content
 
@@ -169,3 +121,15 @@ https://swaits.com/adding-mermaid-js-to-zola/
 https://sippo.work/blog/20231105-deploy-zola-with-cloudflare-pages/
 
 https://zenn.dev/com4dc/scraps/c6c0f5fb87a1f9
+
+```
+
+```
+
+```
+
+```
+
+```
+
+```
