@@ -1,9 +1,9 @@
 # The URL the site will be built for
-base_url = "https://zola-mytutorial.yukiosada.work"
+base_url = "https://github.com/ultra-coins/uc-room-website-new"
 
 # The site title and description; used in feeds by default.
-title = "zola-mytutorial"
-description = "This is a zola mytutorial"
+title = "Ultra Coins"
+description = "This is a ultara coins website."
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true

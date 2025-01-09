@@ -1,9 +1,24 @@
 +++
 title = "こんにちはこんにちはこんにちは"
 date = 2040-01-01
+authors = ["長田悠生", "情報太郎"]
 +++
 
-This is my first blog post.
+# h1
+
+## h2
+
+### h3
+
+#### h4
+
+##### h5
+
+###### h6
+
+アリスは川辺でおねえさんのよこにすわって、なんにもすることがないのでとても退屈（たいくつ）しはじめていました。一、二回はおねえさんの読んでいる本をのぞいてみたけれど、そこには絵も会話もないのです。「絵や会話のない本なんて、なんの役にもたたないじゃないの」とアリスは思いました。そこでアリスは、頭のなかで、ひなぎくのくさりをつくったら楽しいだろうけれど、起きあがってひなぎくをつむのもめんどくさいし、どうしようかと考えていました（といっても、昼間で暑いし、とってもねむくて頭もまわらなかったので、これもたいへんだったのですが）。そこへいきなり、ピンクの目をした白うさぎが近くを走ってきたのです。
+
+それだけなら、そんなにめずらしいことでもありませんでした。さらにアリスとしては、そのうさぎが「どうしよう！　どうしよう！　ちこくしちゃうぞ！」とつぶやくのを聞いたときも、それがそんなにへんてこだとは思いませんでした（あとから考えてみたら、これも不思議に思うべきだったのですけれど、でもこのときには、それがごく自然なことに思えたのです）。でもそのうさぎがほんとうに、チョッキのポケットから懐中時計（かいちゅうどけい）をとりだしてそれをながめ、そしてまたあわててかけだしたとき、アリスもとびあがりました。というのも、チョッキのポケットなんかがあるうさぎはこれまで見たことがないし、そこからとりだす時計をもって
 
 ## emoji
 
@@ -12,21 +27,19 @@ This is my first blog post.
 ## code block
 
 ```py
-import numpy as np
-
-array=[1,2,3,4]
-a=np.array(array)
+fn main() {
+    println!("Hello, world!");
+}
 ```
 
 ## mermaid
 
 {% mermaid() %}
-graph TD
-A[Enter Chart Definition] --> B(Preview)
-B --> C{decide}
-C --> D[Keep]
-C --> E[Edit Definition]
-E --> B
-D --> F[Save Image and Code]
-F --> B
+flowchart LR
+rdb["PostgreSQL (RDB)"] <--> server["server (main)"]
+graphdb["Neo4j (GraphDB)"] <--> server["server (main)"]
+meilisearch["Meilisearch (検索エンジン)"] <--> server["server (main)"]
+cloudflare["Cloudflare R2 (画像保存)"] <--> image-server["image-server (画像専用)"]
+server["server (main)"] <--> client["client"]
+image-server["image-server (画像専用)"] <--> client["client"]
 {% end %}

@@ -1,8 +1,14 @@
 {% extends "base.html" %} {% block content %}
-<h1 class="title">{{ page.title }}</h1>
-<p class="subtitle"><strong>{{ page.date }}</strong></p>
-{{ page.content | safe }}
-
-<p><a href="/">Back</a></p>
-
+<div class="container blog-config">
+  <h1 class="blog-title">{{ page.title }}</h1>
+  <p class="blog-meta">
+    <span>公開日: {{ page.date }}</span>
+    <span
+      >作成者: {%for author in page.authors %} {% if loop.last %}{{ author }}{%
+      else %}{{ author }},&ensp;{% endif %} {% endfor %}</span
+    >
+  </p>
+  <p><a href="/#news">Newsに戻る</a></p>
+  {{ page.content | safe }}
+</div>
 {% endblock content %}
