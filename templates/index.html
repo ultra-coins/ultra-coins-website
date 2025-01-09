@@ -1,26 +1,59 @@
 {% extends "base.html" %} {% block content %}
 <div class="container">
   <h1 class="title krona-one-regular">What is Ultra Coins</h1>
-  <div>
+  <!--PC-->
+  <div class="pc-box">
     <p class="content klee-one-regular">
       Ultra Coinsの説明
       ほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげ
     </p>
-    <div></div>
+    <div class="img-box">
+      <img src="./ultra-coins.webp" alt="Ultra Coins" />
+    </div>
+  </div>
+  <!--mobile-->
+  <div class="mobile-box">
+    <div class="img-box">
+      <img src="./ultra-coins.webp" alt="Ultra Coins" />
+    </div>
+    <p class="content klee-one-regular">
+      Ultra Coinsの説明
+      ほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげ
+    </p>
   </div>
 
   <h1 class="title krona-one-regular">News</h1>
   <ul class="post-ul">
     {%for page in section.pages %}
     <li class="post-li">
-      <a class="post-a" href="{{ page.permalink | safe}}"
-        ><p class="krona-one-regular post-date">{{ page.date }}</p>
-        <p class="klee-one-regular post-title">{{ page.title }}</p>
+      <a class="post-a" href="{{ page.permalink | safe}}">
+        <p class="klee-one-regular">
+          <span class="post-date">{{ page.date }}</span
+          ><span class="post-title">{{ page.title }}</span>
+        </p>
       </a>
     </li>
     {% endfor %}
   </ul>
 
   <h1 class="title krona-one-regular">How to Join Ultra Coins</h1>
+  <div class="join-box">
+    <p class="klee-one-regular">
+      <span class="join-number">1.</span>
+      <span class="join-content">こんにちはこんにちはこんにちは</span>
+    </p>
+    <p class="klee-one-regular">
+      <span class="join-number">2.</span>
+      <span class="join-content">こんにちはこんにちはこんにちは</span>
+    </p>
+    <p class="klee-one-regular">
+      <span class="join-number">3.</span>
+      <span class="join-content">こんにちはこんにちはこんにちは</span>
+    </p>
+    <p class="klee-one-regular">
+      <span class="join-number">4.</span>
+      <span class="join-content">こんにちはこんにちはこんにちは</span>
+    </p>
+  </div>
 </div>
 {% endblock content %}

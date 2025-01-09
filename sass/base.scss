@@ -28,11 +28,13 @@ section {
   max-width: 1024px;
   width: calc(100% - 40px);
   margin: 0 auto;
+  padding-bottom: 300px;
 }
 
 .title {
   font-size: 2.5em;
   text-align: center;
+  margin: 180px 0 50px 0;
 }
 
 .content {
@@ -41,27 +43,83 @@ section {
 }
 
 /* What is Ultra Coins */
+/* mobile */
+@media screen and (max-width: 990px) {
+  .mobile-box {
+    max-width: 100%;
+    .img-box {
+      width: 350px;
+      margin: 0 auto;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .pc-box {
+    display: none;
+  }
+}
+/* PC */
+@media screen and (min-width: 989px) {
+  .pc-box {
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    gap: 30px;
+    p {
+      min-width: 350px;
+      width: 60%;
+    }
+    .img-box {
+      width: 350px;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  .mobile-box {
+    display: none;
+  }
+}
+
+/* News */
 .post-ul {
+  max-width: 800px;
+  margin: 0 auto;
   .post-li {
     list-style: none;
-    padding: 10px;
+    padding: 30px 10px 10px 10px;
+    display: block;
     .post-a {
-      text-decoration: underline #ffffff;
       display: flex;
       flex-direction: row;
-    }
-    .post-a:hover {
-      text-decoration: none;
+      border-bottom: #ffffff 1px solid;
     }
     .post-date {
-      margin: 0;
+      margin: 0 20px;
       font-size: 1.5em;
       display: inline-block;
     }
     .post-title {
-      margin: 0;
-      padding: 0;
-      font-size: 2.2em;
+      margin: 0 10px;
+      font-size: 2em;
+      display: inline-block;
     }
+  }
+}
+
+/*How to Join Ultra Coins*/
+.join-box {
+  max-width: 800px;
+  margin: 0 auto;
+  .join-number {
+    margin: 0 10px;
+    font-size: 2em;
+  }
+  .join-content {
+    margin: 0 10px;
+    font-size: 1.8em;
   }
 }
