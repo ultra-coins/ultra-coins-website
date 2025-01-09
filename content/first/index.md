@@ -42,11 +42,11 @@ authors = ["長田悠生", "情報太郎"]
 これは caution です。
 {% end %}
 
-## Link
+## Tips
+
+Link
 
 筑波大学: [筑波大学 HP](https://www.tsukuba.ac.jp/)
-
-## Tips
 
 Nomal
 
@@ -85,7 +85,7 @@ emoji
 
 # :smile:
 
-## code block
+code block
 
 ```rs
 fn main() {
