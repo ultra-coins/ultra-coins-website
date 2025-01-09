@@ -20,7 +20,8 @@ https://www.getzola.org/documentation/content/syntax-highlighting/
 fn main() {
     println!("Hello, world!");
 }
-```
+````
+
 ```
 
 ### mermaid
@@ -181,4 +182,7 @@ https://zenn.dev/com4dc/scraps/c6c0f5fb87a1f9
 ```
 
 ```
-````
+
+```
+
+```
