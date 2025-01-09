@@ -6,6 +6,8 @@ zola 0.19.2
 
 ## templates の構造
 
+以下、疑似 html で表現している
+
 ### メインページ
 
 ```
@@ -68,6 +70,24 @@ fn main() {
 ````
 
 ![codeblock](https://github.com/ultra-coins/uc-room-website-new/blob/main/assets/codeblock.png)
+
+### katex
+
+```
+$$
+#この中に数式を書く
+$$
+```
+
+#### 例
+
+```
+$$
+\frac{dy}{dx} + p(x) y^2 + q(x) y + r(x) = 0
+$$
+```
+
+![katex](https://github.com/ultra-coins/uc-room-website-new/blob/main/assets/katex.png)
 
 ### mermaid
 

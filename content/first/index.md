@@ -46,7 +46,42 @@ authors = ["長田悠生", "情報太郎"]
 
 筑波大学: [筑波大学 HP](https://www.tsukuba.ac.jp/)
 
-## emoji
+## Tips
+
+Nomal
+
+**Bold**
+
+_Italic_
+
+~Strikethrough~
+
+- Bullet List
+  - Bullet List
+    - Bullet List
+- Bullet List
+
+1. Numbered List
+   1. Numbered List
+      1. Numbered List
+2. Numbered List
+
+- [ ] checkbox
+- [x] checkbox
+
+> Blockquote
+
+Horizontal
+
+---
+
+katex
+
+$$
+\frac{dy}{dx} + p(x) y^2 + q(x) y + r(x) = 0
+$$
+
+emoji
 
 # :smile:
 
