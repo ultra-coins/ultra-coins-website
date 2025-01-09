@@ -74,6 +74,17 @@ body {
   p {
     font-size: 1.1em;
   }
+  blockquote {
+    background-color: #3d3d3d;
+    margin: 0;
+    padding: 5px 10px;
+    border-left: #595959 5px solid;
+    * {
+      margin: 0;
+      padding: 0;
+      color: #ececec;
+    }
+  }
 }
 .blog-title {
   text-align: center;
