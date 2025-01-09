@@ -28,16 +28,14 @@ fn main() {
 ### mermaid
 
 ```
-
-{% mermaid() %} #この中に mermaid のコードを書く
+{% mermaid() %}
+#この中に mermaid のコードを書く
 {% end %}
-
 ```
 
 #### 例
 
 ```
-
 {% mermaid() %}
 flowchart LR
 rdb["PostgreSQL (RDB)"] <--> server["server (main)"]
@@ -47,7 +45,6 @@ cloudflare["Cloudflare R2 (画像保存)"] <--> image-server["image-server (画�
 server["server (main)"] <--> client["client"]
 image-server["image-server (画像専用)"] <--> client["client"]
 {% end %}
-
 ```
 
 ![marmaid](https://github.com/ultra-coins/uc-room-website-new/blob/main/assets/marmaid.png)
@@ -55,23 +52,17 @@ image-server["image-server (画像専用)"] <--> client["client"]
 ### note
 
 ```
-
 {% note() %}
-
 # ここに note の内容を書く
-
 {% end %}
-
 ```
 
 #### 例
 
 ```
-
 {% note() %}
 これは note です。
 {% end %}
-
 ```
 
 ![note](https://github.com/ultra-coins/uc-room-website-new/blob/main/assets/note.png)
@@ -79,23 +70,17 @@ image-server["image-server (画像専用)"] <--> client["client"]
 ### tip
 
 ```
-
 {% tip() %}
-
 # ここに tip の内容を書く
-
 {% end %}
-
 ```
 
 #### 例
 
 ```
-
 {% tip() %}
 これは tip です。
 {% end %}
-
 ```
 
 ![tip](https://github.com/ultra-coins/uc-room-website-new/blob/main/assets/tip.png)
@@ -103,23 +88,17 @@ image-server["image-server (画像専用)"] <--> client["client"]
 ### important
 
 ```
-
 {% important() %}
-
 # ここに important の内容を書く
-
 {% end %}
-
 ```
 
 #### 例
 
 ```
-
 {% important() %}
 これは important です。
 {% end %}
-
 ```
 
 ![important](https://github.com/ultra-coins/uc-room-website-new/blob/main/assets/important.png)
@@ -127,23 +106,17 @@ image-server["image-server (画像専用)"] <--> client["client"]
 ### warning
 
 ```
-
 {% warning() %}
-
 # ここに warning の内容を書く
-
 {% end %}
-
 ```
 
 #### 例
 
 ```
-
 {% warning() %}
 これは warning です。
 {% end %}
-
 ```
 
 ![warning](https://github.com/ultra-coins/uc-room-website-new/blob/main/assets/warning.png)
@@ -151,23 +124,17 @@ image-server["image-server (画像専用)"] <--> client["client"]
 ### caution
 
 ```
-
 {% caution() %}
-
 # ここに caution の内容を書く
-
 {% end %}
-
 ```
 
 #### 例
 
 ```
-
 {% caution() %}
 これは caution です。
 {% end %}
-
 ```
 
 ![caution](https://github.com/ultra-coins/uc-room-website-new/blob/main/assets/caution.png)
