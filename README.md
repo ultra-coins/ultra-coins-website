@@ -23,6 +23,8 @@ fn main() {
 ```
 ````
 
+![codeblock](https://github.com/ultra-coins/uc-room-website-new/blob/main/assets/codeblock.png)
+
 ### mermaid
 
 ```
@@ -48,6 +50,8 @@ image-server["image-server (画像専用)"] <--> client["client"]
 
 ```
 
+![marmaid](https://github.com/ultra-coins/uc-room-website-new/blob/main/assets/marmaid.png)
+
 ### note
 
 ```
@@ -69,6 +73,8 @@ image-server["image-server (画像専用)"] <--> client["client"]
 {% end %}
 
 ```
+
+![note](https://github.com/ultra-coins/uc-room-website-new/blob/main/assets/note.png)
 
 ### tip
 
@@ -92,6 +98,8 @@ image-server["image-server (画像専用)"] <--> client["client"]
 
 ```
 
+![tip](https://github.com/ultra-coins/uc-room-website-new/blob/main/assets/tip.png)
+
 ### important
 
 ```
@@ -113,6 +121,8 @@ image-server["image-server (画像専用)"] <--> client["client"]
 {% end %}
 
 ```
+
+![important](https://github.com/ultra-coins/uc-room-website-new/blob/main/assets/important.png)
 
 ### warning
 
@@ -136,6 +146,8 @@ image-server["image-server (画像専用)"] <--> client["client"]
 
 ```
 
+![warning](https://github.com/ultra-coins/uc-room-website-new/blob/main/assets/warning.png)
+
 ### caution
 
 ```
@@ -158,6 +170,8 @@ image-server["image-server (画像専用)"] <--> client["client"]
 
 ```
 
+![caution](https://github.com/ultra-coins/uc-room-website-new/blob/main/assets/caution.png)
+
 ## References
 
 https://www.getzola.org/documentation/getting-started/overview/#content
@@ -167,23 +181,3 @@ https://swaits.com/adding-mermaid-js-to-zola/
 https://sippo.work/blog/20231105-deploy-zola-with-cloudflare-pages/
 
 https://zenn.dev/com4dc/scraps/c6c0f5fb87a1f9
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
-
-```
