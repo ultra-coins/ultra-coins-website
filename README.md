@@ -1,5 +1,23 @@
 # Ultra Coins の Website 案
 
+## 使用した SSG
+
+zola 0.19.2
+
+## 環境の Setup
+
+### 非 Nix ユーザーの場合
+
+以下を参考に zola をインストールしてください。
+
+https://www.getzola.org/documentation/getting-started/installation/
+
+### Nix ユーザーの場合 (flake を利用できる場合)
+
+```shell
+nix develop -c $SHELL
+```
+
 ## 記事の追加方法
 
 適当なディレクトリを`content`配下に作成し、その中に`index.md`を作成する。
