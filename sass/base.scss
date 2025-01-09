@@ -50,7 +50,7 @@ body {
   text-align: left;
 }
 
-/* Ultra Coins Blog css */
+//* Ultra Coins Blog css *//
 .blog-config {
   font-family: "Klee One", serif;
   h1 {
@@ -86,7 +86,7 @@ body {
   }
 }
 
-/* shortcodes */
+//* shortcodes *//
 .alert-type {
   border-radius: 10px;
   padding: 10px;
@@ -113,7 +113,34 @@ body {
   background-color: #d0212b80;
 }
 
-/* Ultra Coins Site css */
+//* 404 Page *//
+.error-page-box {
+  height: 100lvh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .statuscode {
+    font-size: 7em;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+  .status-message {
+    font-size: 2em;
+    text-align: center;
+    margin: 20px 0;
+    padding: 0;
+  }
+  .error-page-a {
+    font-size: 1em;
+    text-align: center;
+    margin: 10px 0;
+    padding: 0;
+  }
+}
+
+//* Ultra Coins Site *//
 /* first view */
 .first-view {
   height: 100lvh;

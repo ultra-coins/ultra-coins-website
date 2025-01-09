@@ -4,6 +4,32 @@
 
 zola 0.19.2
 
+## templates の構造
+
+### メインページ
+
+```
+<base.html>
+  <index.html></index.html>
+</base.html>
+```
+
+### 記事ページ
+
+```
+<base.html>
+    <blog-template.html></blog-template.html>
+</base.html>
+```
+
+### 404 ページ
+
+```
+<base.html>
+    <404.html></404.html>
+</base.html>
+```
+
 ## 環境の Setup
 
 ### 非 Nix ユーザーの場合

@@ -1,4 +1,11 @@
 {% extends "base.html" %} {% block content %}
-<h1>404</h1>
-<p>Page not found</p>
+<div class="error-page-box">
+  <div class="inner-error-page-box">
+    <h1 class="statuscode krona-one-regular">404</h1>
+    <p class="status-message krona-one-regular">Page not found</p>
+    <a href="/">
+      <p class="error-page-a krona-one-regular">Go back to home</p>
+    </a>
+  </div>
+</div>
 {% endblock content %}
