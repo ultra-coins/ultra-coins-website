@@ -52,7 +52,7 @@ authors = ["長田悠生", "情報太郎"]
 
 ## code block
 
-```py
+```rs
 fn main() {
     println!("Hello, world!");
 }

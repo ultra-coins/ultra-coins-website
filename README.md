@@ -9,17 +9,33 @@
 
 ## Ultra Coins の Blog 特有の記法
 
+### Code Block の各言語一覧
+
+https://www.getzola.org/documentation/content/syntax-highlighting/
+
+#### 例
+
+````
+```rs
+fn main() {
+    println!("Hello, world!");
+}
+```
+```
+
 ### mermaid
 
 ```
-{% mermaid() %}
-#この中にmermaidのコードを書く
+
+{% mermaid() %} #この中に mermaid のコードを書く
 {% end %}
+
 ```
 
 #### 例
 
 ```
+
 {% mermaid() %}
 flowchart LR
 rdb["PostgreSQL (RDB)"] <--> server["server (main)"]
@@ -35,81 +51,111 @@ image-server["image-server (画像専用)"] <--> client["client"]
 ### note
 
 ```
+
 {% note() %}
-# ここにnoteの内容を書く
+
+# ここに note の内容を書く
+
 {% end %}
+
 ```
 
 #### 例
 
 ```
+
 {% note() %}
 これは note です。
 {% end %}
+
 ```
 
 ### tip
 
 ```
+
 {% tip() %}
-# ここにtipの内容を書く
+
+# ここに tip の内容を書く
+
 {% end %}
+
 ```
 
 #### 例
 
 ```
+
 {% tip() %}
 これは tip です。
 {% end %}
+
 ```
 
 ### important
 
 ```
+
 {% important() %}
-# ここにimportantの内容を書く
+
+# ここに important の内容を書く
+
 {% end %}
+
 ```
 
 #### 例
 
 ```
+
 {% important() %}
 これは important です。
 {% end %}
+
 ```
 
 ### warning
 
 ```
+
 {% warning() %}
-# ここにwarningの内容を書く
+
+# ここに warning の内容を書く
+
 {% end %}
+
 ```
 
 #### 例
 
 ```
+
 {% warning() %}
 これは warning です。
 {% end %}
+
 ```
 
 ### caution
 
 ```
+
 {% caution() %}
-# ここにcautionの内容を書く
+
+# ここに caution の内容を書く
+
 {% end %}
+
 ```
 
 #### 例
 
 ```
+
 {% caution() %}
 これは caution です。
 {% end %}
+
 ```
 
 ## References
@@ -133,3 +179,6 @@ https://zenn.dev/com4dc/scraps/c6c0f5fb87a1f9
 ```
 
 ```
+
+```
+````
