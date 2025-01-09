@@ -42,6 +42,10 @@ authors = ["長田悠生", "情報太郎"]
 これは caution です。
 {% end %}
 
+## Link
+
+筑波大学: [筑波大学 HP](https://www.tsukuba.ac.jp/)
+
 ## emoji
 
 # :smile:
