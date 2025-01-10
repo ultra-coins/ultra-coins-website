@@ -40,6 +40,10 @@ zola 0.19.2
 </base.html>
 ```
 
+## shortcodesを置く場所
+
+`/templates/shortcodes/`配下に置いてください
+
 ## 環境の Setup
 
 ### 非 Nix ユーザーの場合
