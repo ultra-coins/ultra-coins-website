@@ -1,4 +1,8 @@
-# Ultra Coins の Website 案
+# Ultra Coins の Website
+
+このレポジトリは、Ultra Coinsのウェブサイト及び、ブログとして機能します。
+
+ウェブサイト及びブログは、zolaというSSG(静的サイトジェネレータ)を使用しています。
 
 ## 使用した SSG
 
@@ -50,9 +54,20 @@ https://www.getzola.org/documentation/getting-started/installation/
 nix develop -c $SHELL
 ```
 
+## 記事を書くときのルール
+
+1. 適当に作成するディレクトリ名でbranchを切ってから、作業に取りかかってください。
+2. 記事の追加方法は、以下の「記事の追加方法」を参照してください。
+
 ## 記事の追加方法
 
 適当なディレクトリを`content`配下に作成し、その中に`index.md`を作成する。
+
+> [!WARNING]
+> すでに存在するディレクトリ名は使用できません。
+
+> [!NOTE]
+> ディレクトリ名が記事のURIを識別する際の名前になります。
 
 > [!NOTE]
 > 画像などは作成したディレクトリに配置する。
