@@ -19,5 +19,5 @@ jobs:
           nix_path: nixpkgs=channel:nixpkgs-unstable
       - name: nix develop
         run: nix develop
-      - name: Check
+      - name: zola check
         run: zola check
