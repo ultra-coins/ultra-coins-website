@@ -26,8 +26,8 @@ jobs:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
       - name: nix develop
         run: nix develop
-    - name: zola check
-      run: zola check
+      - name: zola check
+        run: zola check
   container:
     needs: check
     runs-on: ubuntu-latest
