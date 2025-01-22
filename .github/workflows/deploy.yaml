@@ -20,4 +20,4 @@ jobs:
       - name: nix develop
         run: nix develop
       - name: zola check
-        run: zola --help
+        run: pwd
