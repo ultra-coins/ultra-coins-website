@@ -11,4 +11,4 @@ RUN ["zola", "build"]
 
 FROM nginx:1.25.3
 COPY --from=builder /project/public /public
-EXPOSE 8000
+EXPOSE 80
