@@ -24,9 +24,10 @@ jobs:
       - uses: cachix/install-nix-action@v30
         with:
           github_access_token: ${{ secrets.GITHUB_TOKEN }}
-      - run: |
-          nix develop
-          zola check
+      - name: nix develop
+        run: nix develop
+    - name: zola check
+      run: zola check
   container:
     needs: check
     runs-on: ubuntu-latest
