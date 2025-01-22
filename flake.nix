@@ -17,9 +17,6 @@
           packages = with pkgs; [
             zola
           ];
-          shellHook = ''
-            zola check
-          '';
         };
       }
     );
