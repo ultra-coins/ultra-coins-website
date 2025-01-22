@@ -20,4 +20,5 @@ jobs:
       - name: nix develop
         run: nix develop
       - name: zola check
-        run: pwd
+        run: ls -la
+
