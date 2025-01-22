@@ -13,11 +13,13 @@
         pkgs = inputs.nixpkgs.legacyPackages.${system};
       in
       {
-        devShells.default = pkgs.mkShell {
-          packages = with pkgs; [
-            zola
-          ];
-        };
+        devShells.default =
+          with pkgs;
+          mkShell {
+            buildInputs = [
+              zola
+            ];
+          };
       }
     );
 }
