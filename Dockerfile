@@ -1,9 +1,14 @@
-FROM ghcr.io/getzola/zola:v0.17.1 as zola
+FROM ghcr.io/getzola/zola:v0.17.1 as builder
+
+LABEL version="0.0.1"
+LABEL descripttion="Ultra Coins Website"
+LABEL maintainer="Ultra Coins"
 
 COPY . /project
 WORKDIR /project
 RUN ["zola", "build"]
 
-FROM ghcr.io/static-web-server/static-web-server:2
-WORKDIR /
-COPY --from=zola /project/public /public
+
+FROM nginx:1.25.3
+COPY --from=builder /project/public /public
+EXPOSE 8000
