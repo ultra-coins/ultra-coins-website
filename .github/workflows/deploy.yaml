@@ -17,10 +17,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Install Zola
-        run: sudo snap install --edge zola
-      - name: Check
-        run: zola check
+      # - name: Install Zola
+      #   run: sudo snap install --edge zola
+      # - name: Check
+      #   run: zola check
+      - uses: cachix/install-nix-action@v27
+        with:
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+      - run: |
+          nix develop
+          zola check
   container:
     runs-on: ubuntu-latest
     permissions:
