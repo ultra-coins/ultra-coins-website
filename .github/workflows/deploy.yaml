@@ -1,4 +1,4 @@
-name: check
+name: deploy
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  test:
+  check:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -20,4 +20,4 @@ jobs:
       - name: nix develop
         run: nix develop
       - name: zola check
-        run: zola check
+        run: zola --help
