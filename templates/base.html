@@ -41,6 +41,7 @@
       integrity="sha384-7lU0muIg/i1plk7MgygDUp3/bNRA65orrBub4/OSWHECgwEsY83HaS1x3bljA/XV"
       crossorigin="anonymous"
     />
+    <!--katex-->
 
     <!-- The loading of KaTeX is deferred to speed up page rendering -->
     <script
@@ -66,14 +67,15 @@
     <div class="space"></div>
     <footer>
       <p class="credit">
-        <a class="klee-one-regular" href="https://yukiosada.work"
-          >© 2025 Designed and Created by: Yuki Osada
+        <a class="klee-one-regular" href="https://yukiosada.work">
+          © <span id="year"></span> Designed and Created by: Yuki Osada
         </a>
       </p>
     </footer>
     <script type="module">
       import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs";
       mermaid.initialize({ startOnLoad: true, theme: "dark" });
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </body>
 </html>
