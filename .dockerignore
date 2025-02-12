@@ -1,0 +1,9 @@
+/assets
+.dockerignore
+.gitignore
+Dockerfile
+LICENSE
+README.md
+flake.nix
+flake.lock
+
