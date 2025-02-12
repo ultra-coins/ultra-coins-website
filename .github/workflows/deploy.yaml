@@ -23,6 +23,29 @@ jobs:
           nix_path: nixpkgs=channel:nixpkgs-unstable
       - name: Check Articles
         run: nix develop --command bash -c "zola check"
+  tag:
+    runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      TZ: "Asia/Tokyo"
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Get Previous Tag
+        id: pre_tag
+        run: |
+          echo "pre_tag=$(curl -H 'Accept: application/vnd.github.v3+json' -H 'Authorization: token ${{ secrets.GITHUB_TOKEN }}' https://api.github.com/repos/${{ github.repository }}/releases/latest | jq -r .tag_name)" >> $GITHUB_OUTPUT
+      - name: Generate Tag
+        id: release_tag
+        run: |
+          today=$(date +'%Y.%m.%d')
+          pre_release_date=$(echo ${{ steps.pre_tag.outputs.pre_tag }} | awk -F'-' '{print $1}')
+          pre_release_count=$(echo ${{ steps.pre_tag.outputs.pre_tag }} | awk -F'-' '{print $2}')
+          if [[ ! $pre_release_date = $today ]]; then
+            pre_release_count=0
+          fi
+          echo "release_tag=$today-$(($pre_release_count + 1))" >> $GITHUB_OUTPUT
   container:
     needs: check
     runs-on: ubuntu-latest
