@@ -184,15 +184,13 @@ body {
   justify-content: center;
   .first-view-title {
     text-align: center;
-    font-size: 3.5em;
     position: relative;
-    background-color: rgba(40, 40, 40, 0.4);
+    background-color: rgba(40, 40, 40, 0.6);
     padding: 10px 0 10px 0;
   }
   .first-view-sub-title {
-    font-size: 1em;
     position: relative;
-    background-color: rgba(40, 40, 40, 0.4);
+    background-color: rgba(40, 40, 40, 0.6);
     padding: 10px 0 10px 0;
   }
   .light-cable-left {
@@ -208,6 +206,46 @@ body {
     right: 0;
     transform: rotateX(0deg) rotateZ(320deg);
     margin: -50px -50px 0 0;
+  }
+}
+
+/* nano */
+@media screen and (max-width: 349px) {
+  .first-view-title {
+    font-size: 2.39em;
+  }
+  .first-view-sub-title {
+    font-size: 0.8em;
+  }
+}
+
+/* small */
+@media screen and (max-width: 399px) and (min-width: 350px) {
+  .first-view-title {
+    font-size: 2.6em;
+  }
+  .first-view-sub-title {
+    font-size: 0.8em;
+  }
+}
+
+
+/* middle */
+@media screen and (max-width: 455px) and (min-width: 400px) {
+  .first-view-title {
+    font-size: 3.0em;
+  }
+  .first-view-sub-title {
+    font-size: 0.8em;
+  }
+}
+/* PC */
+@media screen and (min-width: 454px) {
+  .first-view-title {
+    font-size: 3.5em;
+  }
+  .first-view-sub-title {
+    font-size: 1em;
   }
 }
 
