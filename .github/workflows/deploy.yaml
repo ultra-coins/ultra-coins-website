@@ -48,7 +48,7 @@ jobs:
           tag_name: ${{ steps.generate-tag.outputs.tag-name }}
           release_name: Release ${{ steps.generate-tag.outputs.tag-name }}
           body: |
-            Changes in this Release
+            Release ${{ steps.generate-tag.outputs.tag-name }}
           draft: false
           prerelease: false
   container:
