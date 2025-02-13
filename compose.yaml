@@ -1,5 +1,5 @@
 services:
-  moon:
+  ultra-coins-website:
     image: ultra-coins-website
     container_name: ultra-coins-website
     build:
