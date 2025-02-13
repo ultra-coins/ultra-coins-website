@@ -1,7 +1,7 @@
 +++
-title = "こんにちはこんにちはこんにちは"
-date = 2040-01-01
-authors = ["長田悠生", "情報太郎"]
+title = "Sample Blog Page"
+date = 3000-01-01
+authors = ["Ultra-Coins"]
 +++
 
 # h1
