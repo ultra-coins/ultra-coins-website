@@ -94,6 +94,30 @@ fn main() {
 
 ![codeblock](https://github.com/ultra-coins/uc-room-website-new/blob/main/assets/codeblock.png)
 
+### 画像
+
+```
+{{ image(path="/image/path") }}
+```
+
+imageは、`width=int`,`height=int`,`caption=String`をそれぞれオプションで追加できます。(Blogのsampleページを参照)
+
+> [!NOTE]
+> `width`や`height`に非常に大きな自然数を入れた場合は、Markdownの結果が表示されるDOMの範囲まで大きくなります。
+>
+> (cssのレイアウトを壊そうとしても、壊せないようにしているということです。)
+
+#### `width`,`height`,`caption`を全て適用した例
+
+```
+{{ image(path="/content/sample/image.jpg", width=1000, height=200, caption="captionの例") }}
+```
+
+![image](https://github.com/ultra-coins/uc-room-website-new/blob/main/assets/image.png)
+
+> [!NOTE]
+> 画像は自動でwebpに変換されるはずなので、画像サイズは気にしなくて良いです。
+
 ### katex
 
 ```

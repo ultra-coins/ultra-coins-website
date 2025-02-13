@@ -113,7 +113,7 @@ image-server["image-server (画像専用)"] <--> client["client"]
 
 image with caption
 
-{{ image(path="/content/sample/image.jpg", width=1000, height=200, caption="caption sample") }}
+{{ image(path="/content/sample/image.jpg", width=1000, height=200, caption="captionの例") }}
 
 custom image
 
