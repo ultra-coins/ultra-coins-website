@@ -1,78 +1,81 @@
 {% extends "base.html" %} {% block content %}
-<div class="container">
-  <div class="first-view">
-    <div class="light-cable-left">
-      <img
-      src="/light-cable.svg"
-      alt="light cable"/>
+  <section class="section">
+  <div class="container">
+    <div class="first-view">
+      <div class="light-cable-left">
+        <img
+        src="/light-cable.svg"
+        alt="light cable"/>
+      </div>
+      <div class="light-cable-right">
+        <img
+        src="/light-cable.svg"
+        alt="light cable"/>
+      </div>
+      <div class="inner-first-view krona-one-regular">
+        <h1 class="first-view-title">Ultra Coins</h1>
+        <h3 class="first-view-sub-title">
+          Connect the world through networks...
+        </h3>
+      </div>
     </div>
-    <div class="light-cable-right">
-      <img
-      src="/light-cable.svg"
-      alt="light cable"/>
-    </div>
-    <div class="inner-first-view krona-one-regular">
-      <h1 class="first-view-title">Ultra Coins</h1>
-      <h3 class="first-view-sub-title">
-        Connect the world through networks...
-      </h3>
-    </div>
-  </div>
 
-  <h1 class="title sawarabi-gothic-regular">Ultra Coinsとは</h1>
-  <!--PC-->
-  <div class="pc-box">
-    <p class="content sawarabi-gothic-regular">
-      Ultra Coinsの説明
-      ほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげ
-    </p>
-    <div class="img-box">
-      <img src="./ultra-coins.webp" alt="Ultra Coins" />
+    <h1 class="title sawarabi-gothic-regular">Ultra Coinsとは</h1>
+    <!--PC-->
+    <div class="pc-box">
+      <p class="content sawarabi-gothic-regular">
+        Ultra Coinsの説明
+        ほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげ
+      </p>
+      <div class="img-box">
+        <img src="./ultra-coins.webp" alt="Ultra Coins" />
+      </div>
+    </div>
+    <!--mobile-->
+    <div class="mobile-box">
+      <div class="img-box">
+        <img src="./ultra-coins.webp" alt="Ultra Coins" />
+      </div>
+      <p class="content sawarabi-gothic-regular">
+        Ultra Coinsの説明
+        ほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげ
+      </p>
+    </div>
+
+    <h1 class="title sawarabi-gothic-regular" id="news">ニュース</h1>
+    <ul class="post-ul">
+      {%for page in section.pages %}
+      <li class="post-li">
+        <a class="post-a" href="{{ page.permalink | safe}}">
+          <p class="sawarabi-gothic-regular">
+            <span class="post-date">{{ page.date }}</span
+            ><span class="post-title">{{ page.title }}</span>
+          </p>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+
+    <h1 class="title sawarabi-gothic-regular">入室方法</h1>
+    <div class="join-box">
+      <p class="sawarabi-gothic-regular">
+        <span class="join-number">1.</span>
+        <span class="join-content">こんにちはこんにちはこんにちは</span>
+      </p>
+      <p class="sawarabi-gothic-regular">
+        <span class="join-number">2.</span>
+        <span class="join-content">こんにちはこんにちはこんにちは</span>
+      </p>
+      <p class="sawarabi-gothic-regular">
+        <span class="join-number">3.</span>
+        <span class="join-content">こんにちはこんにちはこんにちは</span>
+      </p>
+      <p class="sawarabi-gothic-regular">
+        <span class="join-number">4.</span>
+        <span class="join-content">こんにちはこんにちはこんにちは</span>
+      </p>
     </div>
   </div>
-  <!--mobile-->
-  <div class="mobile-box">
-    <div class="img-box">
-      <img src="./ultra-coins.webp" alt="Ultra Coins" />
-    </div>
-    <p class="content sawarabi-gothic-regular">
-      Ultra Coinsの説明
-      ほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげ
-    </p>
-  </div>
-
-  <h1 class="title sawarabi-gothic-regular" id="news">ニュース</h1>
-  <ul class="post-ul">
-    {%for page in section.pages %}
-    <li class="post-li">
-      <a class="post-a" href="{{ page.permalink | safe}}">
-        <p class="sawarabi-gothic-regular">
-          <span class="post-date">{{ page.date }}</span
-          ><span class="post-title">{{ page.title }}</span>
-        </p>
-      </a>
-    </li>
-    {% endfor %}
-  </ul>
-
-  <h1 class="title sawarabi-gothic-regular">入室方法</h1>
-  <div class="join-box">
-    <p class="sawarabi-gothic-regular">
-      <span class="join-number">1.</span>
-      <span class="join-content">こんにちはこんにちはこんにちは</span>
-    </p>
-    <p class="sawarabi-gothic-regular">
-      <span class="join-number">2.</span>
-      <span class="join-content">こんにちはこんにちはこんにちは</span>
-    </p>
-    <p class="sawarabi-gothic-regular">
-      <span class="join-number">3.</span>
-      <span class="join-content">こんにちはこんにちはこんにちは</span>
-    </p>
-    <p class="sawarabi-gothic-regular">
-      <span class="join-number">4.</span>
-      <span class="join-content">こんにちはこんにちはこんにちは</span>
-    </p>
-  </div>
-</div>
+</section>
+<div class="space"></div>
 {% endblock content %}

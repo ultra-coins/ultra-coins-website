@@ -68,10 +68,10 @@ body {
 .blog-content {
   display: flex;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1160px;
   margin: 30px auto 0 auto;
   .toc-box {
-    margin: 150px 0 0 0;
+    margin: 150px 20px 0 50px;
     padding: 10px 0 10px 0;
     border-radius: 10px;
     width: 300px;
@@ -79,12 +79,13 @@ body {
     background-color: #454545;
     overflow-y: scroll;
     overflow-x: visible;
+    position: sticky;
+    top: 20px;
   }
   .blog-container {
-    width: 100%;
-    max-width: 788px;
-    margin: 0 auto;
+    flex: 1;
     padding: 0 20px;
+    margin: 0 0 130px 0;
     border-radius: 10px;
     background-color: #454545;
   }
@@ -140,6 +141,24 @@ body {
       display: inline-block;
       margin: 0 10px;
     }
+  }
+}
+
+/* mobile */
+@media screen and (max-width: 1024px) {
+  .toc-box {
+    display: none;
+  }
+  .blog-container {
+    margin: 0 20px;
+  }
+}
+
+/* PC */
+@media screen and (min-width: 1025px) {
+  .blog-container {
+    max-width: 760px;
+    margin: 0 0 0 20px;
   }
 }
 
