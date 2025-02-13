@@ -1,5 +1,5 @@
 {
-  description = "zola environment";
+  description = "ultra-coins-blog";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
