@@ -8,7 +8,6 @@ COPY . /project
 WORKDIR /project
 RUN ["zola", "build"]
 
-
 FROM nginx:1.25.3
 COPY --from=builder /project/public /usr/share/nginx/html
 EXPOSE 80
