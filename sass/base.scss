@@ -27,11 +27,11 @@ body {
   grid-template-rows: auto 1fr auto;
   grid-template-columns: 100%;
   min-height: 100vh;
-  overflow-x: hidden;
 }
 
 .section {
   width: 100%;
+  overflow: hidden;
 }
 
 .container {
@@ -244,6 +244,7 @@ body {
 //* Ultra Coins Site *//
 /* first view */
 .first-view {
+  position: relative;
   height: 100lvh;
   width: 100%;
   display: flex;
@@ -276,7 +277,7 @@ body {
     top: 0;
     right: 0;
     transform: rotateX(0deg) rotateZ(320deg);
-    margin: -50px -50px 0 0;
+    margin: -50px -100px 0 0;
   }
 }
 
