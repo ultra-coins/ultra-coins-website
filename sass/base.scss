@@ -56,6 +56,7 @@ body {
   padding: 30px 0 30px 0;
   width: 100%;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
+
   .blog-title {
     padding: 0;
     margin: 0 0 0 30px;
@@ -70,6 +71,7 @@ body {
   width: 100%;
   max-width: 1160px;
   margin: 30px auto 0 auto;
+
   .toc-box {
     margin: 150px 20px 0 50px;
     padding: 10px 0 10px 0;
@@ -82,6 +84,7 @@ body {
     position: sticky;
     top: 20px;
   }
+
   .blog-container {
     flex: 1;
     padding: 0 20px;
@@ -92,39 +95,48 @@ body {
 
   .blog-config {
     font-family: "Sawarabi Gothic", serif;
+
     h1 {
       font-size: 2.5em;
       font-weight: 400;
     }
+
     h2 {
       font-size: 2em;
       font-weight: 400;
     }
+
     h3 {
       font-size: 1.8em;
       font-weight: 400;
     }
+
     h4 {
       font-size: 1.6em;
       font-weight: 400;
     }
+
     h5 {
       font-size: 1.3em;
       font-weight: 400;
     }
+
     h6 {
       font-size: 1.1em;
       font-weight: 400;
     }
+
     p {
       font-size: 1.1em;
       font-weight: 400;
     }
+
     blockquote {
       background-color: #3d3d3d;
       margin: 0;
       padding: 5px 10px;
       border-left: #595959 5px solid;
+
       * {
         margin: 0;
         padding: 0;
@@ -132,11 +144,14 @@ body {
       }
     }
   }
+
   .blog-title {
     text-align: center;
   }
+
   .blog-meta {
     text-align: center;
+
     span {
       display: inline-block;
       margin: 0 10px;
@@ -149,6 +164,7 @@ body {
   .toc-box {
     display: none;
   }
+
   .blog-container {
     margin: 0 20px;
   }
@@ -168,23 +184,29 @@ body {
   padding: 10px;
   margin: 30px 0;
 }
+
 .alert-type-label {
   padding: 0;
   margin: 0;
   font-size: 1.2em;
 }
+
 .note {
   background-color: #0a68da80;
 }
+
 .tip {
   background-color: #187f3280;
 }
+
 .important {
   background-color: #7f4edf80;
 }
+
 .warning {
   background-color: #98650180;
 }
+
 .caution {
   background-color: #d0212b80;
 }
@@ -196,18 +218,21 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
   .statuscode {
     font-size: 7em;
     text-align: center;
     margin: 0;
     padding: 0;
   }
+
   .status-message {
     font-size: 2em;
     text-align: center;
     margin: 20px 0;
     padding: 0;
   }
+
   .error-page-a {
     font-size: 1em;
     text-align: center;
@@ -224,17 +249,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+
   .first-view-title {
     text-align: center;
     position: relative;
     background-color: rgba(40, 40, 40, 0.6);
     padding: 10px 0 10px 0;
   }
+
   .first-view-sub-title {
     position: relative;
     background-color: rgba(40, 40, 40, 0.6);
     padding: 10px 0 10px 0;
   }
+
   .light-cable-left {
     position: absolute;
     bottom: 0;
@@ -242,6 +270,7 @@ body {
     transform: rotateX(180deg) rotateZ(200deg);
     margin: 0 0 -100px -50px;
   }
+
   .light-cable-right {
     position: absolute;
     top: 0;
@@ -256,6 +285,7 @@ body {
   .first-view-title {
     font-size: 2.39em;
   }
+
   .first-view-sub-title {
     font-size: 0.8em;
   }
@@ -266,6 +296,7 @@ body {
   .first-view-title {
     font-size: 2.6em;
   }
+
   .first-view-sub-title {
     font-size: 0.8em;
   }
@@ -277,15 +308,18 @@ body {
   .first-view-title {
     font-size: 3.0em;
   }
+
   .first-view-sub-title {
     font-size: 0.8em;
   }
 }
+
 /* PC */
 @media screen and (min-width: 454px) {
   .first-view-title {
     font-size: 3.5em;
   }
+
   .first-view-sub-title {
     font-size: 1em;
   }
@@ -296,19 +330,23 @@ body {
 @media screen and (max-width: 990px) {
   .mobile-box {
     max-width: 100%;
+
     .img-box {
       width: 350px;
       margin: 0 auto;
     }
+
     img {
       max-width: 100%;
       height: auto;
     }
   }
+
   .pc-box {
     display: none;
   }
 }
+
 /* PC */
 @media screen and (min-width: 989px) {
   .pc-box {
@@ -316,18 +354,22 @@ body {
     display: flex;
     flex-wrap: wrap-reverse;
     gap: 30px;
+
     p {
       min-width: 350px;
       width: 60%;
     }
+
     .img-box {
       width: 350px;
     }
+
     img {
       max-width: 100%;
       height: auto;
     }
   }
+
   .mobile-box {
     display: none;
   }
@@ -339,24 +381,29 @@ body {
   padding-top: 70px;
   margin: 110px 0 50px 0;
 }
+
 .post-ul {
   max-width: 800px;
   margin: 0 auto;
   padding: 0;
+
   .post-li {
     list-style: none;
     padding: 30px 10px 10px 10px;
     display: block;
+
     .post-a {
       display: flex;
       flex-direction: row;
       border-bottom: #ffffff 1px solid;
     }
+
     .post-date {
       margin: 0 20px;
       font-size: 1.3em;
       display: inline-block;
     }
+
     .post-title {
       margin: 0 10px;
       font-size: 1.5em;
@@ -369,10 +416,12 @@ body {
 .join-box {
   max-width: 780px;
   margin: 0 auto;
+
   .join-number {
     margin: 0 10px;
     font-size: 1.5em;
   }
+
   .join-content {
     margin: 0 10px;
     font-size: 1.5em;
@@ -384,11 +433,13 @@ body {
   width: 100%;
   height: 300px;
 }
+
 footer {
   margin: auto 0 0 0;
   padding: 0;
   background-color: #141414;
   height: 150px;
+
   .credit {
     margin: 0;
     padding: 0;
