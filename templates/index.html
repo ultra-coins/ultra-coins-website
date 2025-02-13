@@ -44,14 +44,16 @@
     <h1 class="title sawarabi-gothic-regular" id="news">ニュース</h1>
     <ul class="post-ul">
       {%for page in section.pages %}
-      <li class="post-li">
-        <a class="post-a" href="{{ page.permalink | safe}}">
-          <p class="sawarabi-gothic-regular">
-            <span class="post-date">{{ page.date }}</span
-            ><span class="post-title">{{ page.title }}</span>
-          </p>
-        </a>
-      </li>
+        {% if loop.index < 5 %}
+          <li class="post-li">
+            <a class="post-a" href="{{ page.permalink | safe}}">
+              <p class="sawarabi-gothic-regular">
+                <span class="post-date">{{ page.date }}</span
+                ><span class="post-title">{{ page.title }}</span>
+              </p>
+            </a>
+          </li>
+        {% endif %}
       {% endfor %}
     </ul>
 
