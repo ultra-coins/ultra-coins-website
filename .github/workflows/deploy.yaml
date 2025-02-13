@@ -23,34 +23,6 @@ jobs:
           nix_path: nixpkgs=channel:nixpkgs-unstable
       - name: Check Articles
         run: nix develop --command bash -c "zola check"
-  tag:
-    runs-on: ubuntu-latest
-    env:
-      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      TZ: "Asia/Tokyo"
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v3
-      - name: Generate Tag
-        id: generate-tag
-        run: |
-          echo "$(TZ=Asia/Tokyo date +%Y.%m.%d-%H-%M-%S.%N)" > TAG_NAME
-          git tag $(cat TAG_NAME)
-          git push origin $(cat TAG_NAME)
-          echo "::set-output name=tag-name::$(cat TAG_NAME)"
-      - name: Create Release
-        id: create-release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag_name: ${{ steps.generate-tag.outputs.tag-name }}
-          release_name: Release ${{ steps.generate-tag.outputs.tag-name }}
-          body: |
-            Release ${{ steps.generate-tag.outputs.tag-name }}
-          draft: false
-          prerelease: false
   container:
     needs: check
     runs-on: ubuntu-latest
