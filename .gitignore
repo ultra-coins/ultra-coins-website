@@ -23,4 +23,8 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
+# direnv setting folder
 .direnv/
+
+# pnpm lock file
+pnpm-lock.yaml
