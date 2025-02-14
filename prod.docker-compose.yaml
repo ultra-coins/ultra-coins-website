@@ -1,0 +1,9 @@
+services:
+  ultra-coins-website:
+    image: ghcr.io/ultra-coins/ultra-coins-website/website:main
+    container_name: ultra-coins-website
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - '5000:80'

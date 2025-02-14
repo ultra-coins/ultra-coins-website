@@ -1,0 +1,9 @@
+services:
+  ultra-coins-website:
+    image: ultra-coins-website
+    container_name: ultra-coins-website
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    ports:
+      - '5000:80'
