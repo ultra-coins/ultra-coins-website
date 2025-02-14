@@ -1,0 +1,45 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <section class="error-page-section">
+    <div class="inner-error-page-box">
+      <h1 class="statuscode krona-one-regular">500</h1>
+      <p class="status-message krona-one-regular">Internal Server Error</p>
+      <a href="/">
+        <p class="error-page-a krona-one-regular">Go back to home</p>
+      </a>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .error-page-section {
+    height: 100lvh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .statuscode {
+    font-size: 7em;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .status-message {
+    font-size: 2em;
+    text-align: center;
+    margin: 20px 0;
+    padding: 0;
+  }
+
+  .error-page-a {
+    font-size: 1em;
+    text-align: center;
+    margin: 10px 0;
+    padding: 0;
+  }
+</style>
