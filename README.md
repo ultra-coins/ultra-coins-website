@@ -1,4 +1,4 @@
-# Ultra-Coins の Blog
+# Ultra-Coins の Website
 
 このレポジトリは、Ultra-Coins のウェブサイトとして機能します。
 
