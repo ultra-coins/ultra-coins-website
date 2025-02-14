@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="/icon.ico" />
+    <meta name="theme-color" content="rgb(15.29, 15.29, 15.29)" />
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Krona+One&family=Sawarabi+Gothic&display=swap"
+      rel="stylesheet"
+    />
+    <!--Google Fonts-->
+    <!--og setting-->
+    <meta property="og:title" content="Ultra Coins" />
+    <meta name="keyword" content="Ultra Coins, ultra coins, coins, ウルトラコインズ, 筑波大学, 情報情報科学類" />
+    <meta property="og:description" content="Ultra Coinsのウェブサイトです。" />
+    <meta property="og:image:width" content="1500" />
+    <meta
+      property="og:image"
+      content="https://github.com/ultra-coins/uc-room-website-new/blob/main/static/ultra-coins.webp"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://github.com/ultra-coins/" />
+    <!--og setting-->
+    <title>Ultra-Coins</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+
+<style is:global>
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    background-color: #282828;
+  }
+
+  body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+    min-height: 100vh;
+  }
+
+  * {
+    color: #ffffff;
+  }
+
+  .krona-one-regular {
+    font-family: 'Krona One', serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .sawarabi-gothic-regular {
+    font-family: 'Sawarabi Gothic', serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+</style>

@@ -1,260 +1,48 @@
-# Ultra-Coins の Website
+# Astro Starter Kit: Basics
 
-このレポジトリは、Ultra-Coins のブログとして機能します。
-
-ブログは、zola という SSG(静的サイトジェネレータ)を使用しています。
-
-## 使用した SSG
-
-zola 0.19.2
-
-## レスポンシブ対応
-
-対応済み
-
-## templates の構造
-
-以下、疑似 html で表現している
-
-### メインページ
-
-```
-<base.html>
-  <index.html></index.html>
-</base.html>
+```sh
+npm create astro@latest -- --template basics
 ```
 
-### 記事ページ
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
+[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
 
-```
-<base.html>
-    <blog-template.html></blog-template.html>
-</base.html>
-```
+> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
 
-### 404 ページ
+![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
 
-```
-<base.html>
-    <404.html></404.html>
-</base.html>
-```
+## 🚀 Project Structure
 
-## shortcodes を置く場所
+Inside of your Astro project, you'll see the following folders and files:
 
-`/templates/shortcodes/`配下に置いてください
-
-## 環境の Setup
-
-### 非 Nix ユーザーの場合
-
-以下を参考に zola をインストールしてください。
-
-https://www.getzola.org/documentation/getting-started/installation/
-
-### Nix ユーザーの場合 (flake を利用できる場合)
-
-```shell
-nix develop -c $SHELL
+```text
+/
+├── public/
+│   └── favicon.svg
+├── src/
+│   ├── layouts/
+│   │   └── Layout.astro
+│   └── pages/
+│       └── index.astro
+└── package.json
 ```
 
-## 記事を書くときのルール
+To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
 
-1. 適当に作成するディレクトリ名で branch を切ってから、作業に取りかかってください。
-2. 記事の追加方法は、以下の「記事の追加方法」を参照してください。
+## 🧞 Commands
 
-## 記事の追加方法
+All commands are run from the root of the project, from a terminal:
 
-適当なディレクトリを`content`配下に作成し、その中に`index.md`を作成する。
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |
 
-> [!WARNING]
-> すでに存在するディレクトリ名は使用できません。
+## 👀 Want to learn more?
 
-> [!NOTE]
-> ディレクトリ名が記事の URI を識別する際の名前になります。
-
-> [!NOTE]
-> 画像などは作成したディレクトリに配置する。
-
-## Ultra-Coins の Blog 特有の記法
-
-### Code Block の各言語一覧
-
-https://www.getzola.org/documentation/content/syntax-highlighting/
-
-#### 例
-
-````
-```rs
-fn main() {
-    println!("Hello, world!");
-}
-```
-````
-
-![codeblock](https://github.com/ultra-coins/uc-room-website-new/blob/main/assets/codeblock.png)
-
-### 画像
-
-```
-{{ image(path="/image/path") }}
-```
-
-image は、`width=int`,`height=int`,`caption=String`をそれぞれオプションで追加できます。(Blog の sample ページを参照)
-
-> [!NOTE] > `width`や`height`に非常に大きな自然数を入れた場合は、Markdown の結果が表示される DOM の範囲まで大きくなります。
->
-> (css のレイアウトを壊そうとしても、壊せないようにしているということです。)
-
-#### `width`,`height`,`caption`を全て適用した例
-
-```
-{{ image(path="/content/sample/image.jpg", width=1000, height=200, caption="captionの例") }}
-```
-
-![image](https://github.com/ultra-coins/uc-room-website-new/blob/main/assets/image.png)
-
-> [!NOTE]
-> 画像は自動で webp に変換されるはずなので、画像サイズは気にしなくて良いです。
-
-### katex
-
-```
-$$
-#この中に数式を書く
-$$
-```
-
-#### 例
-
-```
-$$
-\frac{dy}{dx} + p(x) y^2 + q(x) y + r(x) = 0
-$$
-```
-
-![katex](https://github.com/ultra-coins/uc-room-website-new/blob/main/assets/katex.png)
-
-### mermaid
-
-```
-{% mermaid() %}
-#この中に mermaid のコードを書く
-{% end %}
-```
-
-#### 例
-
-```
-{% mermaid() %}
-flowchart LR
-rdb["PostgreSQL (RDB)"] <--> server["server (main)"]
-graphdb["Neo4j (GraphDB)"] <--> server["server (main)"]
-meilisearch["Meilisearch (検索エンジン)"] <--> server["server (main)"]
-cloudflare["Cloudflare R2 (画像保存)"] <--> image-server["image-server (画像専用)"]
-server["server (main)"] <--> client["client"]
-image-server["image-server (画像専用)"] <--> client["client"]
-{% end %}
-```
-
-![marmaid](https://github.com/ultra-coins/uc-room-website-new/blob/main/assets/marmaid.png)
-
-### note
-
-```
-{% note() %}
-# ここに note の内容を書く
-{% end %}
-```
-
-#### 例
-
-```
-{% note() %}
-これは note です。
-{% end %}
-```
-
-![note](https://github.com/ultra-coins/uc-room-website-new/blob/main/assets/note.png)
-
-### tip
-
-```
-{% tip() %}
-# ここに tip の内容を書く
-{% end %}
-```
-
-#### 例
-
-```
-{% tip() %}
-これは tip です。
-{% end %}
-```
-
-![tip](https://github.com/ultra-coins/uc-room-website-new/blob/main/assets/tip.png)
-
-### important
-
-```
-{% important() %}
-# ここに important の内容を書く
-{% end %}
-```
-
-#### 例
-
-```
-{% important() %}
-これは important です。
-{% end %}
-```
-
-![important](https://github.com/ultra-coins/uc-room-website-new/blob/main/assets/important.png)
-
-### warning
-
-```
-{% warning() %}
-# ここに warning の内容を書く
-{% end %}
-```
-
-#### 例
-
-```
-{% warning() %}
-これは warning です。
-{% end %}
-```
-
-![warning](https://github.com/ultra-coins/uc-room-website-new/blob/main/assets/warning.png)
-
-### caution
-
-```
-{% caution() %}
-# ここに caution の内容を書く
-{% end %}
-```
-
-#### 例
-
-```
-{% caution() %}
-これは caution です。
-{% end %}
-```
-
-![caution](https://github.com/ultra-coins/uc-room-website-new/blob/main/assets/caution.png)
-
-## References
-
-https://www.getzola.org/documentation/getting-started/overview/#content
-
-https://swaits.com/adding-mermaid-js-to-zola/
-
-https://sippo.work/blog/20231105-deploy-zola-with-cloudflare-pages/
-
-https://zenn.dev/com4dc/scraps/c6c0f5fb87a1f9
+Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

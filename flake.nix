@@ -1,5 +1,5 @@
 {
-  description = "ultra-coins-blog";
+  description = "ultra-coins-website";
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     flake-utils.url = "github:numtide/flake-utils";
@@ -13,13 +13,12 @@
         pkgs = inputs.nixpkgs.legacyPackages.${system};
       in
       {
-        devShells.default =
-          with pkgs;
-          mkShell {
-            buildInputs = [
-              zola
-            ];
-          };
+        devShells.default = pkgs.mkShell {
+          packages = with pkgs; [
+            nodejs
+            corepack
+          ];
+        };
       }
     );
 }

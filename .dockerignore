@@ -1,8 +1,5 @@
-/assets
-.dockerignore
+.envrc
 .gitignore
-Dockerfile
-LICENSE
-README.md
-flake.nix
 flake.lock
+flake.nix
+README.md
