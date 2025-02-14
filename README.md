@@ -1,8 +1,8 @@
-# Ultra Coins の Website
+# Ultra-Coins の Website
 
-このレポジトリは、Ultra Coinsのウェブサイト及び、ブログとして機能します。
+このレポジトリは、Ultra-Coins のブログとして機能します。
 
-ウェブサイト及びブログは、zolaというSSG(静的サイトジェネレータ)を使用しています。
+ブログは、zola という SSG(静的サイトジェネレータ)を使用しています。
 
 ## 使用した SSG
 
@@ -40,7 +40,7 @@ zola 0.19.2
 </base.html>
 ```
 
-## shortcodesを置く場所
+## shortcodes を置く場所
 
 `/templates/shortcodes/`配下に置いてください
 
@@ -60,7 +60,7 @@ nix develop -c $SHELL
 
 ## 記事を書くときのルール
 
-1. 適当に作成するディレクトリ名でbranchを切ってから、作業に取りかかってください。
+1. 適当に作成するディレクトリ名で branch を切ってから、作業に取りかかってください。
 2. 記事の追加方法は、以下の「記事の追加方法」を参照してください。
 
 ## 記事の追加方法
@@ -71,12 +71,12 @@ nix develop -c $SHELL
 > すでに存在するディレクトリ名は使用できません。
 
 > [!NOTE]
-> ディレクトリ名が記事のURIを識別する際の名前になります。
+> ディレクトリ名が記事の URI を識別する際の名前になります。
 
 > [!NOTE]
 > 画像などは作成したディレクトリに配置する。
 
-## Ultra Coins の Blog 特有の記法
+## Ultra-Coins の Blog 特有の記法
 
 ### Code Block の各言語一覧
 
@@ -100,12 +100,11 @@ fn main() {
 {{ image(path="/image/path") }}
 ```
 
-imageは、`width=int`,`height=int`,`caption=String`をそれぞれオプションで追加できます。(Blogのsampleページを参照)
+image は、`width=int`,`height=int`,`caption=String`をそれぞれオプションで追加できます。(Blog の sample ページを参照)
 
-> [!NOTE]
-> `width`や`height`に非常に大きな自然数を入れた場合は、Markdownの結果が表示されるDOMの範囲まで大きくなります。
+> [!NOTE] > `width`や`height`に非常に大きな自然数を入れた場合は、Markdown の結果が表示される DOM の範囲まで大きくなります。
 >
-> (cssのレイアウトを壊そうとしても、壊せないようにしているということです。)
+> (css のレイアウトを壊そうとしても、壊せないようにしているということです。)
 
 #### `width`,`height`,`caption`を全て適用した例
 
@@ -116,7 +115,7 @@ imageは、`width=int`,`height=int`,`caption=String`をそれぞれオプショ�
 ![image](https://github.com/ultra-coins/uc-room-website-new/blob/main/assets/image.png)
 
 > [!NOTE]
-> 画像は自動でwebpに変換されるはずなので、画像サイズは気にしなくて良いです。
+> 画像は自動で webp に変換されるはずなので、画像サイズは気にしなくて良いです。
 
 ### katex
 
