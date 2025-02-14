@@ -1,8 +1,11 @@
 ---
+import Header from '../components/header/index.astro';
+import Footer from '../components/footer';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
+  <Header />
   <section class="error-page-section">
     <div class="inner-error-page-box">
       <h1 class="statuscode krona-one-regular">404</h1>
@@ -12,6 +15,7 @@ import Layout from '../layouts/Layout.astro';
       </a>
     </div>
   </section>
+  <Footer />
 </Layout>
 
 <style>
