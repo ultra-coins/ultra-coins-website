@@ -1,182 +1,213 @@
-* {
-  color: #ffffff;
-}
-
-.krona-one-regular {
-  font-family: "Krona One", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.sawarabi-gothic-regular {
-  font-family: "Sawarabi Gothic", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-
+/* base settings */
 html,
-body,
-section {
+body {
   padding: 0;
   margin: 0;
   background-color: #282828;
+
+  * {
+    color: #ffffff;
+  }
+
+  .krona-one-regular {
+    font-family: "Krona One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .sawarabi-gothic-regular {
+    font-family: "Sawarabi Gothic", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  /* header */
+  .blog-header {
+    padding: 30px 0 30px 0;
+    width: 100%;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
+
+    .blog-title {
+      padding: 0;
+      margin: 0 0 0 30px;
+      font-size: 1em;
+      text-align: left;
+      text-decoration: none;
+    }
+  }
+
+  /* footer */
+  footer {
+    margin: auto 0 0 0;
+    padding: 0;
+    background-color: #141414;
+    height: 150px;
+
+    .credit {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-size: 1em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
 }
 
-body {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-columns: 100%;
-  min-height: 100vh;
-}
-
-.section {
-  width: 100%;
-  overflow: hidden;
-}
-
-.container {
-  max-width: 1024px;
-  width: calc(100% - 40px);
-  margin: 0 auto;
-}
-
-.title {
-  font-size: 2.5em;
-  text-align: center;
-  margin: 180px 0 50px 0;
-}
-
-.content {
-  font-size: 1.2em;
-  text-align: left;
+//* Ultra Coins Blog list *//
+.blog-list-page-section {
 }
 
 //* Ultra Coins Blog *//
-.blog-header {
-  padding: 30px 0 30px 0;
-  width: 100%;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.6);
+.blog-page-section {
+  padding: 0;
+  margin: 0;
+  background-color: #282828;
 
-  .blog-title {
-    padding: 0;
-    margin: 0 0 0 30px;
-    font-size: 1.0em;
-    text-align: left;
-    text-decoration: none;
-  }
-}
+  .blog-content {
+    pre {
+      padding: 15px;
+      border-radius: 7.5px;
+    }
+    display: flex;
+    width: 100%;
+    max-width: 1160px;
+    margin: 30px auto 0 auto;
 
-.blog-content {
-  pre {
-    padding: 15px;
-    border-radius: 7.5px;
-  }
-  display: flex;
-  width: 100%;
-  max-width: 1160px;
-  margin: 30px auto 0 auto;
-
-  .toc-box {
-    margin: 150px 20px 0 50px;
-    padding: 10px 0 10px 0;
-    border-radius: 10px;
-    width: 300px;
-    height: 400px;
-    background-color: #454545;
-    overflow-y: scroll;
-    overflow-x: visible;
-    position: sticky;
-    top: 20px;
-  }
-
-  .blog-container {
-    flex: 1;
-    padding: 0 20px 20px 20px;
-    background-color: #454545;
-  }
-
-  .blog-config {
-    font-family: "Sawarabi Gothic", serif;
-
-    h1 {
-      font-size: 2.5em;
-      font-weight: 400;
+    .toc-box {
+      margin: 150px 20px 0 50px;
+      padding: 10px 0 10px 0;
+      border-radius: 10px;
+      width: 300px;
+      height: 400px;
+      background-color: #454545;
+      overflow-y: scroll;
+      overflow-x: visible;
+      position: sticky;
+      top: 20px;
     }
 
-    h2 {
-      font-size: 2em;
-      font-weight: 400;
+    .blog-container {
+      flex: 1;
+      padding: 0 20px 20px 20px;
+      background-color: #454545;
     }
 
-    h3 {
-      font-size: 1.8em;
-      font-weight: 400;
-    }
+    .blog-config {
+      font-family: "Sawarabi Gothic", serif;
 
-    h4 {
-      font-size: 1.6em;
-      font-weight: 400;
-    }
+      h1 {
+        font-size: 2.5em;
+        font-weight: 400;
+      }
 
-    h5 {
-      font-size: 1.3em;
-      font-weight: 400;
-    }
+      h2 {
+        font-size: 2em;
+        font-weight: 400;
+      }
 
-    h6 {
-      font-size: 1.1em;
-      font-weight: 400;
-    }
+      h3 {
+        font-size: 1.8em;
+        font-weight: 400;
+      }
 
-    p {
-      font-size: 1.1em;
-      font-weight: 400;
-    }
+      h4 {
+        font-size: 1.6em;
+        font-weight: 400;
+      }
 
-    blockquote {
-      background-color: #3d3d3d;
-      margin: 0;
-      padding: 5px 10px;
-      border-left: #595959 5px solid;
+      h5 {
+        font-size: 1.3em;
+        font-weight: 400;
+      }
 
-      * {
+      h6 {
+        font-size: 1.1em;
+        font-weight: 400;
+      }
+
+      p {
+        font-size: 1.1em;
+        font-weight: 400;
+      }
+
+      blockquote {
+        background-color: #3d3d3d;
         margin: 0;
-        padding: 0;
-        color: #ececec;
+        padding: 5px 10px;
+        border-left: #595959 5px solid;
+
+        * {
+          margin: 0;
+          padding: 0;
+          color: #ececec;
+        }
+      }
+    }
+
+    .blog-title {
+      text-align: center;
+    }
+
+    .blog-meta {
+      text-align: center;
+
+      span {
+        display: inline-block;
+        margin: 0 10px;
       }
     }
   }
 
-  .blog-title {
-    text-align: center;
+  /* mobile */
+  @media screen and (max-width: 1010px) {
+    .toc-box {
+      display: none;
+    }
+    .blog-container {
+      margin: 0;
+    }
   }
 
-  .blog-meta {
-    text-align: center;
-
-    span {
-      display: inline-block;
-      margin: 0 10px;
+  /* PC */
+  @media screen and (min-width: 1011px) {
+    .blog-container {
+      max-width: 760px;
+      margin: 0 0 130px 20px;
+      border-radius: 10px;
     }
   }
 }
 
-/* mobile */
-@media screen and (max-width: 1010px) {
-  .toc-box {
-    display: none;
-  }
-  .blog-container {
-    margin: 0;
-  }
-}
+//* 404 Page *//
+.error-page-section {
+  height: 100lvh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-/* PC */
-@media screen and (min-width: 1011px) {
-  .blog-container {
-    max-width: 760px;
-    margin: 0 0 130px 20px;
-    border-radius: 10px;
+  .statuscode {
+    font-size: 7em;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+
+  .status-message {
+    font-size: 2em;
+    text-align: center;
+    margin: 20px 0;
+    padding: 0;
+  }
+
+  .error-page-a {
+    font-size: 1em;
+    text-align: center;
+    margin: 10px 0;
+    padding: 0;
   }
 }
 
@@ -223,247 +254,5 @@ body {
   padding: 5px 0 0 0;
   font-size: 0.8em;
   text-align: center;
-  color:#d0d0d0;
-}
-
-//* 404 Page *//
-.error-page-box {
-  height: 100lvh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .statuscode {
-    font-size: 7em;
-    text-align: center;
-    margin: 0;
-    padding: 0;
-  }
-
-  .status-message {
-    font-size: 2em;
-    text-align: center;
-    margin: 20px 0;
-    padding: 0;
-  }
-
-  .error-page-a {
-    font-size: 1em;
-    text-align: center;
-    margin: 10px 0;
-    padding: 0;
-  }
-}
-
-//* Ultra Coins Site *//
-/* first view */
-.first-view {
-  position: relative;
-  height: 100lvh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  .first-view-title {
-    text-align: center;
-    position: relative;
-    background-color: rgba(40, 40, 40, 0.6);
-    padding: 10px 0 10px 0;
-  }
-
-  .first-view-sub-title {
-    position: relative;
-    background-color: rgba(40, 40, 40, 0.6);
-    padding: 10px 0 10px 0;
-  }
-
-  .light-cable-left {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    transform: rotateX(180deg) rotateZ(200deg);
-    margin: 0 0 -100px -50px;
-  }
-
-  .light-cable-right {
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: rotateX(0deg) rotateZ(320deg);
-    margin: -50px -100px 0 0;
-  }
-}
-
-/* nano */
-@media screen and (max-width: 349px) {
-  .first-view-title {
-    font-size: 2.39em;
-  }
-
-  .first-view-sub-title {
-    font-size: 0.8em;
-  }
-}
-
-/* small */
-@media screen and (max-width: 399px) and (min-width: 350px) {
-  .first-view-title {
-    font-size: 2.6em;
-  }
-
-  .first-view-sub-title {
-    font-size: 0.8em;
-  }
-}
-
-
-/* middle */
-@media screen and (max-width: 455px) and (min-width: 400px) {
-  .first-view-title {
-    font-size: 3.0em;
-  }
-
-  .first-view-sub-title {
-    font-size: 0.8em;
-  }
-}
-
-/* PC */
-@media screen and (min-width: 454px) {
-  .first-view-title {
-    font-size: 3.5em;
-  }
-
-  .first-view-sub-title {
-    font-size: 1em;
-  }
-}
-
-/* What is Ultra Coins */
-/* mobile */
-@media screen and (max-width: 990px) {
-  .mobile-box {
-    max-width: 100%;
-
-    .img-box {
-      width: 350px;
-      margin: 0 auto;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-  }
-
-  .pc-box {
-    display: none;
-  }
-}
-
-/* PC */
-@media screen and (min-width: 989px) {
-  .pc-box {
-    max-width: 100%;
-    display: flex;
-    flex-wrap: wrap-reverse;
-    gap: 30px;
-
-    p {
-      min-width: 350px;
-      width: 60%;
-    }
-
-    .img-box {
-      width: 350px;
-    }
-
-    img {
-      max-width: 100%;
-      height: auto;
-    }
-  }
-
-  .mobile-box {
-    display: none;
-  }
-}
-
-/* News */
-#news {
-  display: block;
-  padding-top: 70px;
-  margin: 110px 0 0 0;
-}
-
-.post-ul {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 0;
-
-  .post-li {
-    list-style: none;
-    padding: 30px 10px 10px 10px;
-    display: block;
-
-    .post-a {
-      display: flex;
-      flex-direction: row;
-      border-bottom: #ffffff 1px solid;
-    }
-
-    .post-date {
-      margin: 0 20px;
-      font-size: 1.3em;
-      display: inline-block;
-    }
-
-    .post-title {
-      margin: 0 10px;
-      font-size: 1.5em;
-      display: inline-block;
-    }
-  }
-}
-
-/*How to Join Ultra Coins*/
-.join-box {
-  max-width: 780px;
-  margin: 0 auto;
-
-  .join-number {
-    margin: 0 10px;
-    font-size: 1.5em;
-  }
-
-  .join-content {
-    margin: 0 10px;
-    font-size: 1.5em;
-  }
-}
-
-/* footer */
-.space {
-  width: 100%;
-  height: 300px;
-}
-
-footer {
-  margin: auto 0 0 0;
-  padding: 0;
-  background-color: #141414;
-  height: 150px;
-
-  .credit {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    font-size: 1.0em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  color: #d0d0d0;
 }
