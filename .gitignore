@@ -25,6 +25,3 @@ pnpm-debug.log*
 
 # direnv setting folder
 .direnv/
-
-# pnpm lock file
-pnpm-lock.yaml
