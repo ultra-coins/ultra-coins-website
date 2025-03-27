@@ -22,3 +22,9 @@ pnpm i
 nix develop -c $SHELL
 pnpm i
 ```
+
+## 開発環境の立ち上げ
+
+```shell
+pnpm run dev
+```
