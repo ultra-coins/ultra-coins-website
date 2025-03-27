@@ -15,3 +15,17 @@ footer {
   align-items: center;
   justify-content: center;
 }
+
+/* PC */
+@media screen and (max-width: 439px) {
+  .pc-credit {
+    display: none;
+  }
+}
+
+/* mobile */
+@media screen and (min-width: 440px) {
+  .mobile-credit {
+    display: none;
+  }
+}
