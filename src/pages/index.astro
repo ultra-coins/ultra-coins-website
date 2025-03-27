@@ -1,5 +1,5 @@
 ---
-import Loading from '../components/loading/index.astro';
+import Loading from '../components/loading';
 import FirstView from '../components/first-view/index.astro';
 import Introduction from '../components/introduction/index.astro';
 import Blog from '../components/blog/index.astro';
@@ -9,9 +9,9 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-  <Loading client:load />
+  <Loading />
   <section class="section">
-    <FirstView client:load />
+    <FirstView />
     <div class="container">
       <Introduction />
       <Blog />
