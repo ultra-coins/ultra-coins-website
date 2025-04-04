@@ -10,7 +10,7 @@ importers:
     dependencies:
       '@astrojs/check':
         specifier: ^0.9.4
-        version: 0.9.4(prettier-plugin-astro@0.10.0)(prettier@2.8.8)(typescript@5.8.2)
+        version: 0.9.4(prettier-plugin-astro@0.14.1)(prettier@2.8.8)(typescript@5.8.2)
       '@astrojs/react':
         specifier: ^4.2.0
         version: 4.2.0(@types/react-dom@19.0.3(@types/react@19.0.8))(@types/react@19.0.8)(react-dom@19.0.0(react@19.0.0))(react@19.0.0)(sass-embedded@1.85.0)(yaml@2.7.0)
@@ -37,8 +37,8 @@ importers:
         specifier: ^2.8.8
         version: 2.8.8
       prettier-plugin-astro:
-        specifier: ^0.10.0
-        version: 0.10.0
+        specifier: ^0.14.0
+        version: 0.14.1
 
 packages:
 
@@ -51,9 +51,6 @@ packages:
     hasBin: true
     peerDependencies:
       typescript: ^5.0.0
-
-  '@astrojs/compiler@1.8.2':
-    resolution: {integrity: sha512-o/ObKgtMzl8SlpIdzaxFnt7SATKPxu4oIP/1NL+HDJRzxfJcAkOTAb/ZKMRyULbz4q+1t2/DAebs2Z1QairkZw==}
 
   '@astrojs/compiler@2.10.4':
     resolution: {integrity: sha512-86B3QGagP99MvSNwuJGiYSBHnh8nLvm2Q1IFI15wIUJJsPeQTO3eb2uwBmrqRsXykeR/mBzH8XCgz5AAt1BJrQ==}
@@ -1431,9 +1428,9 @@ packages:
     resolution: {integrity: sha512-rU+ZAv1Ur9jAUZtGPebQVQPzdGhNzaEiQ7VL9+cjsAWPHFYOccNXPNiev1CCDSOg/2j7UujM7ojNhpkuILEVNQ==}
     engines: {node: '>=18.12'}
 
-  prettier-plugin-astro@0.10.0:
-    resolution: {integrity: sha512-dPzop0gKZyVGpTDQmfy+e7FKXC9JT3mlpfYA2diOVz+Ui+QR1U4G/s+OesKl2Hib2JJOtAYJs/l+ovgT0ljlFA==}
-    engines: {node: ^14.15.0 || >=16.0.0, pnpm: '>=7.14.0'}
+  prettier-plugin-astro@0.14.1:
+    resolution: {integrity: sha512-RiBETaaP9veVstE4vUwSIcdATj6dKmXljouXc/DDNwBSPTp8FRkLGDSGFClKsAFeeg+13SB0Z1JZvbD76bigJw==}
+    engines: {node: ^14.15.0 || >=16.0.0}
 
   prettier@2.8.7:
     resolution: {integrity: sha512-yPngTo3aXUUmyuTjeTUT75txrf+aMh9FiD7q9ZE/i6r0bPb22g4FsE6Y338PQX1bmfy08i9QQCB7/rcUAVntfw==}
@@ -1443,6 +1440,11 @@ packages:
   prettier@2.8.8:
     resolution: {integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==}
     engines: {node: '>=10.13.0'}
+    hasBin: true
+
+  prettier@3.5.3:
+    resolution: {integrity: sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw==}
+    engines: {node: '>=14'}
     hasBin: true
 
   prismjs@1.29.0:
@@ -2170,9 +2172,9 @@ snapshots:
       '@jridgewell/gen-mapping': 0.3.8
       '@jridgewell/trace-mapping': 0.3.25
 
-  '@astrojs/check@0.9.4(prettier-plugin-astro@0.10.0)(prettier@2.8.8)(typescript@5.8.2)':
+  '@astrojs/check@0.9.4(prettier-plugin-astro@0.14.1)(prettier@2.8.8)(typescript@5.8.2)':
     dependencies:
-      '@astrojs/language-server': 2.15.4(prettier-plugin-astro@0.10.0)(prettier@2.8.8)(typescript@5.8.2)
+      '@astrojs/language-server': 2.15.4(prettier-plugin-astro@0.14.1)(prettier@2.8.8)(typescript@5.8.2)
       chokidar: 4.0.3
       kleur: 4.1.5
       typescript: 5.8.2
@@ -2181,13 +2183,11 @@ snapshots:
       - prettier
       - prettier-plugin-astro
 
-  '@astrojs/compiler@1.8.2': {}
-
   '@astrojs/compiler@2.10.4': {}
 
   '@astrojs/internal-helpers@0.5.1': {}
 
-  '@astrojs/language-server@2.15.4(prettier-plugin-astro@0.10.0)(prettier@2.8.8)(typescript@5.8.2)':
+  '@astrojs/language-server@2.15.4(prettier-plugin-astro@0.14.1)(prettier@2.8.8)(typescript@5.8.2)':
     dependencies:
       '@astrojs/compiler': 2.10.4
       '@astrojs/yaml2ts': 0.2.2
@@ -2209,7 +2209,7 @@ snapshots:
       vscode-uri: 3.1.0
     optionalDependencies:
       prettier: 2.8.8
-      prettier-plugin-astro: 0.10.0
+      prettier-plugin-astro: 0.14.1
     transitivePeerDependencies:
       - typescript
 
@@ -3837,16 +3837,18 @@ snapshots:
       find-yarn-workspace-root2: 1.2.16
       which-pm: 3.0.1
 
-  prettier-plugin-astro@0.10.0:
+  prettier-plugin-astro@0.14.1:
     dependencies:
-      '@astrojs/compiler': 1.8.2
-      prettier: 2.8.8
+      '@astrojs/compiler': 2.10.4
+      prettier: 3.5.3
       sass-formatter: 0.7.9
 
   prettier@2.8.7:
     optional: true
 
   prettier@2.8.8: {}
+
+  prettier@3.5.3: {}
 
   prismjs@1.29.0: {}
 
