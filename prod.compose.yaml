@@ -1,4 +1,4 @@
-#timestamp:20250408113813412758062
+#timestamp:20250416103139528012567
 services:
   ultra-coins-website:
     image: ghcr.io/ultra-coins/ultra-coins-website/website:main
