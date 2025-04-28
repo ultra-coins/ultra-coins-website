@@ -4,6 +4,13 @@
 
 ウェブサイトは、Astro を使用しています。
 
+## DeepWiki
+
+> [!WARNING]
+> 生成されたdeepwikiの内容の正確性は、検証していません。
+
+https://deepwiki.com/ultra-coins/ultra-coins-website/
+
 ## 環境の Setup
 
 ### 非 Nix ユーザーの場合
