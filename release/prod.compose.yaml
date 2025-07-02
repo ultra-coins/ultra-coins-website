@@ -11,6 +11,7 @@ services:
       traefik.http.routers.ultra-coins-website.tls: true
     networks:
       - traefik
+
 networks:
   traefik:
     external: true
