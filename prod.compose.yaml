@@ -1,10 +1,16 @@
-#timestamp:20250611101006079869991
+#timestamp:20250702105110366061958
 services:
   ultra-coins-website:
     image: ghcr.io/ultra-coins/ultra-coins-website/website:main
     container_name: ultra-coins-website
-    build:
-      context: .
-      dockerfile: ./Dockerfile
-    ports:
-      - '5000:80'
+    labels:
+      traefik.enable: true
+      traefik.http.routers.ultra-coins-website.rule: Host(`ultra.coins.tsukuba.ac.jp`)
+      traefik.http.services.ultra-coins-website.loadbalancer.server.port: 80
+      traefik.http.routers.ultra-coins-website.entrypoints: websecure
+      traefik.http.routers.ultra-coins-website.tls: true
+    networks:
+      - traefik
+networks:
+  traefik:
+    external: true
