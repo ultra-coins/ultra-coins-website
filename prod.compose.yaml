@@ -1,11 +1,11 @@
-#timestamp:20250717170331502761484
+#timestamp:20250717170958169498037
 services:
   ultra-coins-website:
     image: ghcr.io/ultra-coins/ultra-coins-website/website:main
     container_name: ultra-coins-website
     labels:
       traefik.enable: true
-      traefik.http.routers.ultra-coins-website.rule: Host(`ultra.coins.tsukuba.ac.jp`)
+      traefik.http.routers.ultra-coins-website.rule: "Host(`ultra.coins.tsukuba.ac.jp`) && !Path(`/blog`) && !Path(`/hottate`)"
       traefik.http.services.ultra-coins-website.loadbalancer.server.port: 80
       traefik.http.routers.ultra-coins-website.entrypoints: websecure
       traefik.http.routers.ultra-coins-website.tls: true
