@@ -5,6 +5,7 @@ services:
     container_name: ultra-coins-website
     labels:
       traefik.enable: true
+      traefik.http.routers.ultra-coins-website.priority: 1
       traefik.http.routers.ultra-coins-website.rule: "Host(`ultra.coins.tsukuba.ac.jp`) && PathPrefix(`/`)"
       traefik.http.services.ultra-coins-website.loadbalancer.server.port: 80
       traefik.http.routers.ultra-coins-website.entrypoints: websecure
