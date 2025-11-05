@@ -1,4 +1,4 @@
-#timestamp:20251104145019199650657
+#timestamp:20251105102130044641348
 services:
   ultra-coins-website:
     image: ghcr.io/ultra-coins/ultra-coins-website/website:main
@@ -10,6 +10,7 @@ services:
       traefik.http.services.ultra-coins-website.loadbalancer.server.port: 80
       traefik.http.routers.ultra-coins-website.entrypoints: websecure
       traefik.http.routers.ultra-coins-website.tls: true
+    restart: always
     networks:
       - traefik
 
