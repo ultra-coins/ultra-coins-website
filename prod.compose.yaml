@@ -1,4 +1,4 @@
-#timestamp:20261020102218696383653
+#timestamp:20261021140142895231583
 services:
   ultra-coins-website:
     image: ghcr.io/ultra-coins/ultra-coins-website/website:main
@@ -6,7 +6,7 @@ services:
     labels:
       traefik.enable: true
       traefik.http.routers.ultra-coins-website.priority: 1
-      traefik.http.routers.ultra-coins-website.rule: "Host(`ultra.coins.tsukuba.ac.jp`) && PathPrefix(`/`)"
+      traefik.http.routers.ultra-coins-website.rule: "Host(`ultra.coins.tsukuba.ac.jp`) && PathPrefix(`/`) || Host(`ultra-coins.net`)"
       traefik.http.services.ultra-coins-website.loadbalancer.server.port: 80
       traefik.http.routers.ultra-coins-website.entrypoints: websecure
       traefik.http.routers.ultra-coins-website.tls: true
